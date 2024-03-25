@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no">
+<title>404页面</title>
+
+<style>
+html, body {
+  background: #28254C;
+  font-family: 'Ubuntu';
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.box {
+  width: 350px;
+  height: 100%;
+  max-height: 600px;
+  min-height: 450px;
+  background: #332F63;
+  border-radius: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 30px 50px;
+}
+.box .box__ghost {
+  padding: 15px 25px 25px;
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -30%);
+}
+.box .box__ghost .symbol:nth-child(1) {
+  opacity: .2;
+  animation: shine 4s ease-in-out 3s infinite;
+}
+.box .box__ghost .symbol:nth-child(1):before, .box .box__ghost .symbol:nth-child(1):after {
+  content: '';
+  width: 12px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  border-radius: 5px;
+  bottom: 65px;
+  left: 0;
+}
+.box .box__ghost .symbol:nth-child(1):before {
+  transform: rotate(45deg);
+}
+.box .box__ghost .symbol:nth-child(1):after {
+  transform: rotate(-45deg);
+}
+.box .box__ghost .symbol:nth-child(2) {
+  position: absolute;
+  left: -5px;
+  top: 30px;
+  height: 18px;
+  width: 18px;
+  border: 4px solid;
+  border-radius: 50%;
+  border-color: #fff;
+  opacity: .2;
+  animation: shine 4s ease-in-out 1.3s infinite;
+}
+.box .box__ghost .symbol:nth-child(3) {
+  opacity: .2;
+  animation: shine 3s ease-in-out .5s infinite;
+}
+.box .box__ghost .symbol:nth-child(3):before, .box .box__ghost .symbol:nth-child(3):after {
+  content: '';
+  width: 12px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  border-radius: 5px;
+  top: 5px;
+  left: 40px;
+}
+.box .box__ghost .symbol:nth-child(3):before {
+  transform: rotate(90deg);
+}
+.box .box__ghost .symbol:nth-child(3):after {
+  transform: rotate(180deg);
+}
+.box .box__ghost .symbol:nth-child(4) {
+  opacity: .2;
+  animation: shine 6s ease-in-out 1.6s infinite;
+}
+.box .box__ghost .symbol:nth-child(4):before, .box .box__ghost .symbol:nth-child(4):after {
+  content: '';
+  width: 15px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  border-radius: 5px;
+  top: 10px;
+  right: 30px;
+}
+.box .box__ghost .symbol:nth-child(4):before {
+  transform: rotate(45deg);
+}
+.box .box__ghost .symbol:nth-child(4):after {
+  transform: rotate(-45deg);
+}
+.box .box__ghost .symbol:nth-child(5) {
+  position: absolute;
+  right: 5px;
+  top: 40px;
+  height: 12px;
+  width: 12px;
+  border: 3px solid;
+  border-radius: 50%;
+  border-color: #fff;
+  opacity: .2;
+  animation: shine 1.7s ease-in-out 7s infinite;
+}
+.box .box__ghost .symbol:nth-child(6) {
+  opacity: .2;
+  animation: shine 2s ease-in-out 6s infinite;
+}
+.box .box__ghost .symbol:nth-child(6):before, .box .box__ghost .symbol:nth-child(6):after {
+  content: '';
+  width: 12px;
+  height: 4px;
+  background: #fff;
+  position: absolute;
+  border-radius: 5px;
+  top: 26px;
+  right: 15px;
+}
+.box__body {
+  padding-top: 20px;
+}
+.box__description {
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.box__btn {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  background: #4C8CF5;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background .3s;
+}
+.box__btn:hover {
+  background: #1F5AF2;
+}
+@keyframes shine {
+  0% {
+    opacity: .2;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .2;
+  }
+}
+
+</style>
+</head>
+
+<body>
+  <div class="box">
+    <div class="box__ghost">
+      <div class="symbol"></div>
+      <div class="symbol"></div>
+      <div class="symbol"></div>
+      <div class="symbol"></div>
+      <div class="symbol"></div>
+      <div class="symbol"></div>
+      
+      <div class="box__ghost-container">
+        <div class="box__ghost-eyes">
+          <div class="box__eye-left"></div>
+          <div class="box__eye-right"></div>
+        </div>
+        <div class="box__ghost-bottom">
+          <div class="box__ghost-bottom-outer"></div>
+          <div class="box__ghost-bottom-inner"></div>
+        </div>
+      </div>
+      <div class="box__ghost-shadow"></div>
+    </div>
+    
+    <div class="box__body">
+      <div class="box__description">页面未找到，请重试</div>
+      <a href="https://bbs.chxovo.com" class="box__btn">重试按钮</a>
+    </div>
+  </div>
+</body>
+</html>
